@@ -14,8 +14,8 @@ const Contact = () => {
     setShowToast(false); // Hide toast message on new submission
 
     emailjs
-      .sendForm(import.meta.env.VITE_EMAIL_JS_SERVICE_ID, import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID, form.current, {
-        publicKey: import.meta.env.VITE_EMAIL_JS_API_KEY,
+      .sendForm(process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID, form.current, {
+        publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_API_KEY,
       })
       .then(
         () => {
