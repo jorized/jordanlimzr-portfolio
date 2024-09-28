@@ -15,7 +15,7 @@ const Contact = () => {
 
     emailjs
       .sendForm("service_y0kg9x6", "template_nririrk", form.current, {
-        publicKey: process.env.VITE_PUBLIC_API_KEY,
+        publicKey: "xmJw4Smc8zYCarUFV",
       })
       .then(
         () => {
