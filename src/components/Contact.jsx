@@ -14,8 +14,8 @@ const Contact = () => {
     setShowToast(false); // Hide toast message on new submission
 
     emailjs
-      .sendForm(process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID, form.current, {
-        publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_API_KEY,
+      .sendForm("service_y0kg9x6", "template_nririrk", form.current, {
+        publicKey: process.env.NEXT_PUBLIC_API_KEY,
       })
       .then(
         () => {
