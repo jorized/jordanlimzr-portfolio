@@ -24,13 +24,13 @@ const Hero = () => {
     <div className="pb-4 lg:mb-36">
         <div className="flex flex-wrap lg:flex-row-reverse">
             <div className="w-full lg:w-1/2">
-                <div className="flex justify-center lg:p-8">
+                <div className="flex justify-center lg:justify-end lg:p-8">
                     <motion.img 
                         src={profilePic} 
                         alt="Jordan Lim" 
-                        className="border border-stone-900 rounded-3xl" 
-                        width={500}
-                        height={500}
+                        className="border border-stone-900 rounded-3xl brightness-90" 
+                        width={450}
+                        height={450}
                         initial={{ x: 100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1}}
                         transition={{ duration: 0.5 }}
@@ -41,7 +41,7 @@ const Hero = () => {
             <div className="w-full lg:w-1/2">
                 <motion.div initial="hidden" animate="visible" variants={containerVariants} className="flex flex-col items-center lg:items-start mt-10">
                     <motion.h2 variants={childVariants} className="pb-2 text-4xl tracking-tighter lg:text-8xl bg-gradient-to-r from-[#D4145A] to-[#FBB03B] bg-clip-text text-transparent"> Jordan Lim</motion.h2>
-                    <motion.span variants={childVariants} className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-light text-transparent">Aspiring Full Stack Developer </motion.span>
+                    <motion.span variants={childVariants} className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-light text-transparent text-center">Aspiring Full Stack Developer </motion.span>
                     <motion.p variants={childVariants} className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tigher">{HERO_CONTENT}</motion.p>
                     <motion.a
                         variants={childVariants}

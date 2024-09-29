@@ -5,13 +5,13 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
-  const [loading, setLoading] = useState(false); // Manage loading state
-  const [showToast, setShowToast] = useState(false); // Manage toast visibility
+  const [loading, setLoading] = useState(false); 
+  const [showToast, setShowToast] = useState(false); 
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true when the form is submitted
-    setShowToast(false); // Hide toast message on new submission
+    setLoading(true); 
+    setShowToast(false);
 
     emailjs
       .sendForm("service_y0kg9x6", "template_nririrk", form.current, {
@@ -19,12 +19,12 @@ const Contact = () => {
       })
       .then(
         () => {
-          setLoading(false); // Set loading to false on success
-          setShowToast(true); // Show toast message on success
-          setTimeout(() => setShowToast(false), 3000); // Hide toast after 3 seconds
+          setLoading(false);
+          setShowToast(true); 
+          setTimeout(() => setShowToast(false), 3000); 
         },
         (error) => {
-          setLoading(false); // Set loading to false on failure
+          setLoading(false); 
           console.log('FAILED...', error.text);
         }
       );
@@ -81,33 +81,27 @@ const Contact = () => {
         </motion.form>
 
         {/* Custom toast message */}
-{/* Custom toast message */}
-<AnimatePresence>
-  {showToast && (
-    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50"> {/* Updated styles */}
-      <motion.div
-        id="toast-simple"
-        className="flex items-center w-full max-w-xs p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 dark:bg-gray-800"
-        role="alert"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -50 }}
-        transition={{ duration: 0.5 }}
-      >
-        <svg className="w-5 h-5 text-green-600 dark:text-green-500 rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"/>
-        </svg>
-        <div className="ps-4 text-sm font-normal">Email sent successfully.</div>
-      </motion.div>
-    </div>
-  )}
-</AnimatePresence>
+        <AnimatePresence>
+          {showToast && (
+            <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
+              <motion.div
+                id="toast-simple"
+                className="flex items-center w-full max-w-xs p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 dark:bg-gray-800"
+                role="alert"
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 0.5 }}
+              >
+                <svg className="w-5 h-5 text-green-600 dark:text-green-500 rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"/>
+                </svg>
+                <div className="ps-4 text-sm font-normal">Email sent successfully.</div>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
 
-
-
-
-        {/* Loading indicator */}
-        {loading}
       </div>
     </div>
   );
