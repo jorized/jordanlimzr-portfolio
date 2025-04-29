@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="border-t border-stone-900 pb-20">
+    <div>
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}

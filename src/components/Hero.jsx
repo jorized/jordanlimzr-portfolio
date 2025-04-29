@@ -29,7 +29,7 @@ const Hero = () => {
   const wrapperHeight = "calc(450px + 0.5rem)";
 
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-36">
+    <div className=" border-neutral-900 lg:mb-36">
         <div className="flex flex-wrap lg:flex-row-reverse">
             <div className="w-full lg:w-1/2">
                 {/* Parent flex container controls alignment */}
