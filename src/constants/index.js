@@ -4,7 +4,7 @@ import experience1 from "../assets/experiences/experience1.png";
 import experience2 from "../assets/experiences/experience2.png";
 import experience3 from "../assets/experiences/experience3.png";
 
-export const HERO_CONTENT = `I am currently a Year 2 Information Systems student studying at the National University of Singapore (NUS). As someone who is passionate about web and app development and have experience working with technologies such as React, React Native, Node.js and many more, this is the place where I showcase my projects and share my experiences.`;
+export const HERO_CONTENT = `Hello! I am a current Year 2 Information Systems (IS) student at the National University of Singapore. As someone who is passionate about web and app development — this is where I showcase my work and journey.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 

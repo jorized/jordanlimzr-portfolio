@@ -13,13 +13,15 @@ const Navbar = () => {
             <a href="https://www.linkedin.com/in/jordan-lim-zi-rui"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn">
+                aria-label="LinkedIn"
+                title="LinkedIn">
                     <FaLinkedin />
             </a>
             <a href="https://github.com/jorized"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub">
+                aria-label="GitHub"
+                title="GitHub">
                     <FaGithub />
             </a>
         </div>

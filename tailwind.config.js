@@ -7,7 +7,15 @@ export default {
   theme: {
     extend: {
       primary: '#ef7c00',
-      secondary: '#ffffff'
+      secondary: '#ffffff',
+      animation: {
+        'border': 'border 3s linear infinite',
+      },
+      keyframes: {
+        'border': {
+          'to': { '--border-angle': '360deg' },
+        }
+      },
     },
   },
   plugins: [],
