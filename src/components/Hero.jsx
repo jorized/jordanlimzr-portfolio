@@ -34,39 +34,89 @@ const Hero = () => {
             <div className="w-full lg:w-1/2">
                 {/* Parent flex container controls alignment */}
                 <div className="flex justify-center lg:justify-end lg:p-8">
-                    {/* Border Wrapper - Set explicit size */}
-                    <motion.div
-                        className={`
-                            p-2 /* Keep padding */
-                            rounded-3xl
-                            border border-transparent
-                            /* Apply calculated width and height */
-                            w-[${wrapperWidth}] h-[${wrapperHeight}]
-                            /* Background layers */
-                            [background:linear-gradient(45deg,theme(colors.neutral.950),theme(colors.neutral.800)_50%,theme(colors.neutral.950))_padding-box,conic-gradient(from_var(--border-angle),theme(colors.neutral.700/.5)_80%,#D4145A_86%,#FBB03B_90%,#D4145A_94%,theme(colors.neutral.700/.5))_border-box]
-                            /* Conditional animation */
-                            ${isImageAnimationComplete ? 'animate-border' : ''}
-                        `}
-                        initial={borderContainerAnimation.initial}
-                        animate={borderContainerAnimation.animate}
-                        transition={borderContainerAnimation.transition}
-                    >
-                        <motion.img
-                            src={profilePic}
-                            alt="Jordan Lim"
-                            // Keep w-full/h-full to fill the sized container
-                            className="rounded-3xl brightness-90 w-full h-full object-cover"
-                            // Width/Height props less critical now but good practice
-                            width={350}
-                            height={350}
-                            initial={imageAnimation.initial}
-                            animate={imageAnimation.animate}
-                            transition={imageAnimation.transition}
-                            onAnimationComplete={() => {
-                                setIsImageAnimationComplete(true);
+                    {/* Relative wrapper for positioning the "That's me!" element */}
+                    <div className="relative">
+                        {/* Floating "That's me!" annotation */}
+                        <motion.div
+                            className="absolute -top-12 -left-16 z-10 hidden lg:block"
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                ease: "easeInOut"
                             }}
-                        />
-                    </motion.div>
+                        >
+                            <span className="text-stone-300 text-xl font-medium" style={{ fontFamily: "'Caveat', cursive" }}>
+                                That's me!
+                            </span>
+                            {/* Squiggly arrow SVG */}
+                            <svg
+                                className="w-12 h-24 text-stone-300"
+                                viewBox="0 0 43.1 85.9"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path 
+                                    strokeLinecap="round" 
+                                    strokeLinejoin="round" 
+                                    stroke="currentColor"
+                                    strokeWidth="3"
+                                    fill="none"
+                                    d="M11.3,2.5c-5.8,5-8.7,12.7-9,20.3s2,15.1,5.3,22c6.7,14,18,25.8,31.7,33.1" 
+                                />
+                                <path 
+                                    strokeLinecap="round" 
+                                    strokeLinejoin="round" 
+                                    stroke="currentColor"
+                                    strokeWidth="3"
+                                    fill="none"
+                                    d="M40.6,78.1C39,71.3,37.2,64.6,35.2,58" 
+                                />
+                                <path 
+                                    strokeLinecap="round" 
+                                    strokeLinejoin="round" 
+                                    stroke="currentColor"
+                                    strokeWidth="3"
+                                    fill="none"
+                                    d="M39.8,78.5c-7.2,1.7-14.3,3.3-21.5,4.9" 
+                                />
+                            </svg>
+                        </motion.div>
+
+                        {/* Border Wrapper - Set explicit size */}
+                        <motion.div
+                            className={`
+                                p-2 /* Keep padding */
+                                rounded-3xl
+                                border border-transparent
+                                /* Apply calculated width and height */
+                                w-[${wrapperWidth}] h-[${wrapperHeight}]
+                                /* Background layers */
+                                [background:linear-gradient(45deg,theme(colors.neutral.950),theme(colors.neutral.800)_50%,theme(colors.neutral.950))_padding-box,conic-gradient(from_var(--border-angle),theme(colors.neutral.700/.5)_80%,#D4145A_86%,#FBB03B_90%,#D4145A_94%,theme(colors.neutral.700/.5))_border-box]
+                                /* Conditional animation */
+                                ${isImageAnimationComplete ? 'animate-border' : ''}
+                            `}
+                            initial={borderContainerAnimation.initial}
+                            animate={borderContainerAnimation.animate}
+                            transition={borderContainerAnimation.transition}
+                        >
+                            <motion.img
+                                src={profilePic}
+                                alt="Jordan Lim"
+                                // Keep w-full/h-full to fill the sized container
+                                className="rounded-3xl brightness-90 w-full h-full object-cover"
+                                // Width/Height props less critical now but good practice
+                                width={350}
+                                height={350}
+                                initial={imageAnimation.initial}
+                                animate={imageAnimation.animate}
+                                transition={imageAnimation.transition}
+                                onAnimationComplete={() => {
+                                    setIsImageAnimationComplete(true);
+                                }}
+                            />
+                        </motion.div>
+                    </div>
                 </div>
             </div>
             {/* Text Section ... */}
