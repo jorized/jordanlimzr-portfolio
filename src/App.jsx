@@ -11,10 +11,10 @@ const App = () => {
   return (
     <div className="overflow-x-hidden text-stone-300 antialiased">
         <div className="fixed inset-0 -z-10">
-            <div className="relative h-full w-full bg-black">
-            <div className="absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-b from-black via-neutral-900 to-black opacity-40"></div>
+            <div className="relative h-full w-full bg-[#1a1a1a]">
+            <div className="absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-b from-[#1a1a1a] via-neutral-800 to-[#1a1a1a] opacity-40"></div>
 
-                <div className="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
+                <div className="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#1a1a1a)]"></div>
             </div>
         </div>
 

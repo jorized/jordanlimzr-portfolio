@@ -1,4 +1,3 @@
-import { CONTACT } from "../constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
