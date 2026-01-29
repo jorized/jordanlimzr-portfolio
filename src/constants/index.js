@@ -6,12 +6,27 @@ import experience3 from "../assets/experiences/experience3.png";
 
 export const HERO_CONTENT = `Hello! I am a current Year 3 Information Systems (IS) student at the National University of Singapore. As someone who is passionate about web and app development — this is where I showcase my work and journey.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
-
 export const EXPERIENCES = [
   {
-    year: "May 2024 - Aug 2024",
+    year: "Jul 2025 - Present",
     image: experience1,
+    role: "Full Stack Developer",
+    company: "Urban Sharing",
+    description: `Worked on production-critical features across Urban Sharing’s micromobility platform (Fleet, Crew, Urban API), spanning front-end, back-end, and infrastructure. Led the migration of legacy UI components to a modern, reusable Material UI architecture, redesigned and extended MaaS APIs used by city clients, and supported platform migration to Kubernetes. Also spearheaded the rebuild of the public rider web application from an aging codebase to a newer one while preserving core business logic.`,
+    technologies: [
+      "React",
+      "Next.js",
+      "Material UI",
+      "NestJS",
+      "GraphQL",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
+    ],
+  },
+  {
+    year: "May 2024 - Aug 2024",
+    image: experience2,
     role: "Support Engineer",
     company: "Solace",
     description: `Leveraged knowledge of event-driven architecture and undertook more than 10 support tickets. Developed a real-time messaging application using FlutterFlow and Dart, establishing connectivity between a mobile application and Solace's broker through the MQTT protocol. Additionally, built a dynamic visualization API using ReactFlow to generate flow charts, transforming log data into meaningful diagrams for support investigations.`,
@@ -19,19 +34,11 @@ export const EXPERIENCES = [
   },
   {
     year: "Jun 2023 - Aug 2023",
-    image: experience2,
+    image: experience3,
     role: "Software Trainee",
     company: "Metropolitan Wireless International",
     description: `Developed the front-end of an Automated Location Tracking Service (ALTS) web application using Angular, integrated with NgRx for state management, JasperReport for reporting, and PrimeNG for UI components. Additionally, contributed to the initial phase of revamping a Schedule Engine web application in Java, utilizing the Spring Boot framework and Quartz library to automate task scheduling at defined intervals.`,
     technologies: ["AngularJS", "Spring Boot", "Quartz"],
-  },
-  {
-    year: "Oct 2020 - May 2021",
-    image: experience3,
-    role: "Junior Software Developer",
-    company: "IWANNAGO",
-    description: `Revamped the architecture of an event ticketing website, leveraging Angular for the front-end and ASP.NET Core Web API for the back-end, integrated with Google Analytics and AWS for enhanced performance and insights. Additionally, collaborated with SEIKO to develop an Angular-based inventory management system for their watches, as part of an extended internship project`,
-    technologies: ["AngularJS", "ASP.NET", "MySQL", "AWS"],
   },
 ];
 
@@ -52,11 +59,4 @@ export const PROJECTS = [
       "An online pre-assessment web tool developed for the States Court to help parties determine their eligibility to file a Notification for Relief under the COVID-19 (Temporary Measures) Act.",
     technologies: ["HTML", "CSS", "Javascript"],
   },
-
 ];
-
-export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
-};
